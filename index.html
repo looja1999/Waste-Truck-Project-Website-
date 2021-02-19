@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Javascript -->
+    <title>Waste Truck Project</title>
+    <script defer src="./js/script.js"></script>
+  </head>
+ 
+    <!-- Header -->
+    <header>
+      <!-- Hero-text-box  -->
+      <div class="hero-text-box row">
+        <h1 class="animate__animated animate__fadeInUp">
+          runlinc Industrial Project
+        </h1>
+        <h3 class="animate__animated animate__fadeInUp">
+          Waste truck management
+        </h3>
+        <!-- Introduction AI Voice Button -->
+        <div class="introduction-button"  class="animate__animated animate__fadeInUp">
+          <a href="#" class="btn js--introduction-button">Introduction</a>
+        </div>
+        <!--Introduction image  -->
+        <div class="row">
+          <div
+            class="introduction-image js--introduction-image hidden animate__animated animate__fadeInUpBig"
+          >
+            <img
+              src="https://i.ibb.co/JzSpmb4/Truck-Image.jpg"
+              alt="Truck-Image"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section How much CO2 is produced -->
+    <section>
+      <div class="row">
+        <h2>How much CO<sub>2</sub> is produced?</h2>
+      </div>
+
+      <!-- Radio button -->
+      <div class="row">
+        <div class="radio-button">
+          <p>Select:</p>
+          <div>
+            <input
+              class="source"
+              type="radio"
+              id="diesel"
+              name="source"
+              value="Diesel"
+            />
+            <label for="diesel">Diesel</label><br />
+          </div>
+          <div>
+            <input
+              class="source"
+              type="radio"
+              id="gas"
+              name="source"
+              value="Gas"
+            />
+            <label for="gas">Gas</label><br />
+          </div>
+          <div>
+            <input
+              class="source"
+              type="radio"
+              id="electric"
+              name="source"
+              value="Electric"
+            />
+            <label for="electric">Electric</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Range Slider - Distance travelled  -->
+      <div class="row">
+        <div class="range-slider-distance">
+          <p>Distance travelled:</p>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              id="distance"
+            />
+          </div>
+          <p>Value: <span class="demo1"></span></p>
+        </div>
+      </div>
+      <!-- Range Slider - Weight of Waste Picked Up  -->
+      <div class="row">
+        <div class="range-slider-weight">
+          <p>Weight of waste picked up:</p>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              id="weight"
+            />
+          </div>
+          <p>Value: <span class="demo2"></span></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="result">
+          <a href="#" class="btn btn-cal js--btn-cal"
+            >Calculate CO<sub>2</sub></a
+          >
+          <p class="js--result"></p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

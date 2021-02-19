@@ -1,0 +1,534 @@
+/* Base color  
+    #27ae60
+
+*/
+/* Initial Setup */
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+html,
+body {
+  font-family: "lato", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------ */
+/* Reusable */
+/* ------------------------------ */
+.hidden {
+  display: none;
+}
+
+.row {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #fff;
+  font-size: 400%;
+  font-weight: 250;
+  letter-spacing: 2.5px;
+  margin-bottom: 20px;
+  word-spacing: 10px;
+}
+h2 {
+  color: #000;
+  font-size: 250%;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  word-spacing: 8px;
+}
+h2::after {
+  background-color: #27ae60;
+  content: " ";
+  display: block;
+  height: 3px;
+  margin: 10px auto;
+  width: 55%;
+}
+
+h3 {
+  color: #fff;
+  font-size: 200%;
+  font-weight: 300;
+  word-spacing: 6px;
+  letter-spacing: 1.5px;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #27ae60;
+  border: 1px solid #27ae60;
+  border-radius: 30px;
+  color: #fff;
+  display: block;
+  font-size: 130%;
+  font-weight: 300;
+  padding: 15px 20px;
+  margin-top: 30px;
+  text-decoration: none;
+  transition: all 200ms;
+  width: 15%;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #219953;
+  border: 1px solid #219953;
+}
+
+section {
+  padding-top: 60px;
+  height: 100vh;
+}
+/* ------------------------------ */
+/* Header */
+/* ------------------------------ */
+header {
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://i.ibb.co/WcRzGdw/Truck-Image.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s;
+  height: 100vh;
+}
+
+/* Styling hero-text-box */
+.hero-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Introduction Image */
+.hero-text-box .row {
+  margin-top: 30px;
+}
+
+.introduction-image {
+  height: 300px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.introduction-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------------------ */
+/* Section How much Co2 is produced */
+/* ------------------------------ */
+.radio-button {
+  width: 55%;
+  padding: 5px;
+  padding-left: 0px;
+  margin: 21px auto;
+}
+
+.radio-button p {
+  display: inline-block;
+  font-size: 130%;
+}
+
+.radio-button div {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+/* Slider */
+slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.range-slider-distance,
+.range-slider-weight {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.range-slider-weight {
+  margin-top: 50px;
+}
+
+.range-slider-distance p,
+.range-slider-weight p {
+  color: #219953;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 110%;
+  text-align: center;
+}
+
+.range-slider-distance p:first-child,
+.range-slider-weight p:first-child {
+  margin-bottom: 30px;
+  font-size: 125%;
+  text-align: left;
+}
+.range-slider-distance p span,
+.range-slider-weight p span {
+  margin-left: 5px;
+}
+
+/* button calculate */
+.row .btn-cal {
+  font-size: 110%;
+  width: 15%;
+  margin: 50px auto 20px auto;
+  padding: 10px 15px;
+}
+
+.result p {
+  text-align: center;
+  padding-bottom: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  line-height: 15px;
+}
+
+/* ------------------------------ */
+/* Responsive Grid System */
+/* ------------------------------ */
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child {
+  margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 */
+}
+/*  GRID OF TWO  */
+.span_2_of_2 {
+  width: 100%;
+}
+.span_1_of_2 {
+  width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .span_2_of_2,
+  .span_1_of_2 {
+    width: 100%;
+  }
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+  width: 100%;
+}
+.span_2_of_3 {
+  width: 66.13%;
+}
+.span_1_of_3 {
+  width: 32.26%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+  .span_3_of_3,
+  .span_2_of_3,
+  .span_1_of_3 {
+    width: 100%;
+  }
+}
+
+/*  Media queries */
+/* Large Tables and screens - 1024px - 1200px */
+
+@media only screen and (max-width: 1200px) {
+  .hero-text-box {
+    width: 100%;
+    padding: 0 5%;
+  }
+  h1 {
+    font-size: 350%;
+  }
+  header .row {
+    width: 100%;
+    height: auto;
+  }
+
+  .row .js--introduction-button {
+    font-size: 100%;
+  }
+  section .row {
+    width: 100%;
+  }
+  .result .js--btn-cal {
+    font-size: 100%;
+    width: 20%;
+    padding-left: 30px;
+  }
+}
+
+/*****************************************/
+/* Tablets - 801px - 1023px*/
+
+@media only screen and (max-width: 1023px) {
+  .hero-text-box {
+    width: 100%;
+    padding: 0 3%;
+  }
+  h1 {
+    font-size: 300%;
+  }
+  h2 {
+    font-size: 200%;
+  }
+
+  h3 {
+    font-size: 150%;
+  }
+
+  header .row {
+    width: 100%;
+    height: auto;
+  }
+
+  .row .js--introduction-button {
+    width: 18%;
+    font-size: 100%;
+    padding-left: 25px;
+  }
+
+  section .row {
+    width: 100%;
+  }
+
+  .range-slider-distance p,
+  .range-slider-weight p {
+    font-size: 110%;
+  }
+
+  .result .js--btn-cal {
+    font-size: 100%;
+    width: 20%;
+    padding-left: 30px;
+  }
+}
+/*****************************************/
+
+/* Small phones/ tablets - 481px - 767px
+*****************************************/
+@media only screen and (max-width: 800px) {
+  .row .js--introduction-button {
+    width: 20%;
+    font-size: 100%;
+    padding-left: 25px;
+  }
+
+  .introduction-image {
+    height: 300px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  section {
+    height: auto;
+  }
+  .radio-button {
+    width: 70%;
+  }
+
+  header .row:last-of-type {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .radio-button p {
+    font-size: 100%;
+  }
+  .range-slider-distance p,
+  .range-slider-weight p {
+    font-size: 90%;
+  }
+  .result .js--btn-cal {
+    font-size: 90%;
+    /* width: 25%; */
+    padding-left: 30px;
+  }
+}
+
+/* Small phones - Less than or equal to 480px
+*********************************************/
+
+@media only screen and (max-width: 680px) {
+  .row .js--introduction-button {
+    width: 30%;
+    font-size: 100%;
+    padding-left: 30px;
+  }
+  .introduction-image {
+    height: 300px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  .hero-text-box {
+    padding-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 250%;
+  }
+  h2 {
+    font-size: 200%;
+  }
+
+  h3 {
+    font-size: 100%;
+  }
+
+  .range-slider-distance,
+  .range-slider-weight {
+    width: 80%;
+  }
+
+  .radio-button {
+    margin-bottom: 30px;
+  }
+
+  .result .js--btn-cal {
+    font-size: 90%;
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-text-box {
+    margin: 0 10px;
+  }
+  h1 {
+    font-size: 200%;
+  }
+  h2 {
+    font-size: 150%;
+  }
+
+  h3 {
+    font-size: 80%;
+  }
+
+  .introduction-image {
+    height: 250px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .row .js--introduction-button {
+    width: 30%;
+    font-size: 90%;
+    padding-left: 20px;
+  }
+
+  .radio-button {
+    width: 70%;
+  }
+
+  .radio-button p,
+  .radio-button label {
+    font-size: 100%;
+  }
+
+  .range-slider-distance,
+  .range-slider-weight {
+    width: 90%;
+  }
+
+  .range-slider-distance p,
+  .range-slider-weight p {
+    font-size: 70%;
+  }
+
+  .result .js--btn-cal {
+    font-size: 80%;
+    /* width: 25%; */
+    padding-left: 30px;
+  }
+} ;
