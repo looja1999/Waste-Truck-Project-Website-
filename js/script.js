@@ -17,6 +17,61 @@ weightSlider.oninput = function () {
   output2.innerHTML = this.value;
 };
 
+// Slide show AI voice
+const slideShowAI = () => {
+  if (slideIndex === 1) {
+    window.speechSynthesis.cancel();
+    const speech = new SpeechSynthesisUtterance("This is slide show 1");
+    window.speechSynthesis.speak(speech);
+  }
+  if (slideIndex === 2) {
+    window.speechSynthesis.cancel();
+    const speech = new SpeechSynthesisUtterance("This is slide show 2");
+    window.speechSynthesis.speak(speech);
+  }
+  if (slideIndex == 3) {
+    window.speechSynthesis.cancel();
+    const speech = new SpeechSynthesisUtterance("This is slide show 3");
+    window.speechSynthesis.speak(speech);
+  }
+};
+
+// Slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+  slideShowAI();
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  console.log(slideIndex);
+}
+
 // Selectors
 const calculateButton = document.querySelector(".js--btn-cal");
 const introductionButton = document.querySelector(".js--introduction-button");
@@ -29,6 +84,15 @@ let energySourceVal = 0;
 // *******************************************************************************
 
 // Event Listeners
+window.addEventListener("load", () => {
+  //Adding introduction AI Voice
+  window.speechSynthesis.cancel();
+  const speech = new SpeechSynthesisUtterance(
+    "This website calculates CO2 produced by the truck"
+  );
+  window.speechSynthesis.speak(speech);
+});
+
 // Adding introduction image and AI voice
 introductionButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -36,12 +100,8 @@ introductionButton.addEventListener("click", (e) => {
   //Adding introduction image
   introductionImage.classList.remove("hidden");
 
-  //Adding introduction AI Voice
-  window.speechSynthesis.cancel();
-  const speech = new SpeechSynthesisUtterance(
-    "This website calculates CO2 produced by the truck"
-  );
-  window.speechSynthesis.speak(speech);
+  // Speech for each slide show
+  slideShowAI();
 });
 
 // -------------------------------------------------------------------------------
@@ -59,7 +119,7 @@ radioButton.addEventListener("click", (e) => {
 });
 // -------------------------------------------------------------------------------
 
-//Caluacate button
+//Calculate button
 calculateButton.addEventListener("click", (e) => {
   e.preventDefault();
 
