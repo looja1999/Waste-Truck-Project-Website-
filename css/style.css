@@ -115,6 +115,7 @@ header {
 /* Styling hero-text-box */
 .hero-text-box {
   position: absolute;
+  overflow-x: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -411,6 +412,12 @@ slidecontainer {
     width: 400px;
     margin: 0 auto;
   }
+
+  .introduction-image img {
+    height: 250px;
+    width: 400px;
+    margin: 0 auto;
+  }
   section {
     height: auto;
   }
@@ -498,6 +505,12 @@ slidecontainer {
     margin: 0 auto;
   }
 
+  .introduction-image img {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
   .row .js--introduction-button {
     width: 30%;
     font-size: 90%;
@@ -527,6 +540,14 @@ slidecontainer {
     font-size: 80%;
     /* width: 25%; */
     padding-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .row .js--introduction-button {
+    width: 35%;
+    font-size: 80%;
+    padding: 0 10px;
   }
 }
 

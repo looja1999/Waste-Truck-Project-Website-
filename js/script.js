@@ -1,5 +1,12 @@
-// Slider
+// Selectors
+const calculateButton = document.querySelector(".js--btn-cal");
+const introductionButton = document.querySelector(".js--introduction-button");
+const introductionImage = document.querySelector(".js--introduction-image");
+const radioButton = document.querySelector(".radio-button");
+const result = document.querySelector(".js--result");
+let energySourceVal = 0;
 
+// Slider
 var distanceSlider = document.getElementById("distance");
 var weightSlider = document.getElementById("weight");
 var output1 = document.querySelector(".demo1"); //Distance value
@@ -69,16 +76,7 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  console.log(slideIndex);
 }
-
-// Selectors
-const calculateButton = document.querySelector(".js--btn-cal");
-const introductionButton = document.querySelector(".js--introduction-button");
-const introductionImage = document.querySelector(".js--introduction-image");
-const radioButton = document.querySelector(".radio-button");
-const result = document.querySelector(".js--result");
-let energySourceVal = 0;
 
 // *******************************************************************************
 // *******************************************************************************
