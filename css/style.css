@@ -19,7 +19,6 @@ body {
   font-family: "lato", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 300;
-  overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
 
@@ -475,7 +474,11 @@ slidecontainer {
   }
 
   .radio-button {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+  }
+
+  .radio-button div {
+    margin-left: 20px;
   }
 
   .result .js--btn-cal {
@@ -485,8 +488,15 @@ slidecontainer {
 }
 
 @media only screen and (max-width: 500px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .hero-text-box {
     margin: 0 10px;
+    width: 80%;
+    overflow-x: hidden;
   }
   h1 {
     font-size: 200%;
@@ -521,6 +531,10 @@ slidecontainer {
     width: 70%;
   }
 
+  .radio-button div {
+    margin-left: 10px;
+  }
+
   .radio-button p,
   .radio-button label {
     font-size: 100%;
@@ -529,6 +543,7 @@ slidecontainer {
   .range-slider-distance,
   .range-slider-weight {
     width: 90%;
+    overflow-x: hidden;
   }
 
   .range-slider-distance p,
@@ -545,9 +560,17 @@ slidecontainer {
 
 @media only screen and (max-width: 400px) {
   .row .js--introduction-button {
-    width: 35%;
     font-size: 80%;
-    padding: 0 10px;
+    margin-left: 5px;
+    padding: 10px 10px;
+    width: 30%;
+  }
+  .row .radio-button {
+    margin-left: 10px;
+    width: 90%;
+  }
+  .row .radio-button div {
+    width: 100%;
   }
 }
 
